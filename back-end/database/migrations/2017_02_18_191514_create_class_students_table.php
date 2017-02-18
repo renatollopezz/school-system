@@ -4,23 +4,22 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDisciplinesTable extends Migration
+class CreateClassStudentsTable extends Migration
 {
-    /**
+   /**
      * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('disciplines', function (Blueprint $table) {
+        Schema::create('class_students', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->boolean('active');
-            $table->dateTime('registration_date');
-            $table->integer('module_id');
+            $table->integer('class_id');
+            $table->integer('registration_id');
 
-            $table->foreign('module_id')->references('id')->on('modules');
+            $table->foreign('class_id')->references('id')->on('classes');
+            $table->foreign('registration_id')->references('id')->on('registrations');
             $table->timestamps();
         });
     }
@@ -29,8 +28,9 @@ class CreateDisciplinesTable extends Migration
      *
      * @return void
      */
+
     public function down()
     {
-        Schema::dropIfExists('disciplines');
+        Schema::dropIfExists('class_students');
     }
 }
