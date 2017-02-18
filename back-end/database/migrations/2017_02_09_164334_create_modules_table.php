@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatesTable extends Migration
+class CreateModulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateStatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('states', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->char('abbreviation',2)->unique();
+            $table->string('description');
+            $table->boolean('active');
+            $table->dateTime('registration_date');
             $table->timestamps();
         });
+
     }
 
     /**
@@ -28,6 +30,6 @@ class CreateStatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('states');
+        Schema::dropIfExists('modules');
     }
 }
