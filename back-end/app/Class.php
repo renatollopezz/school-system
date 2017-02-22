@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Class extends Model
 {
-    //
+    protected $fillable= ['id','school_year_id','description'];
+
+
+	public function schoolyear(){
+		return $this->belongsTo('App\SchoolYear','school_year_id');
+	}
 }

@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//router student
+Route::resource('student','StudentController');
+//router schoolyear
+Route::resource('schoolyear','SchoolYearController');
+//router schoolyear
+Route::resource('class','ClassController');
