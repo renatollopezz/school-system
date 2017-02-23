@@ -21,4 +21,4 @@ Route::resource('student','StudentController');
 //router schoolyear
 Route::resource('schoolyear','SchoolYearController');
 //router schoolyear
-Route::resource('class','ClassController');
+Route::resource('group','GroupController');
