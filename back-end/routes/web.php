@@ -22,3 +22,11 @@ Route::resource('student','StudentController');
 Route::resource('schoolyear','SchoolYearController');
 //router schoolyear
 Route::resource('group','GroupController');
+
+Route::get('/modules','ModuleController@index');
+Route::get('/modules/{id}','ModuleController@show');
+Route::post('/modules','ModuleController@store');
+Route::put('/modules/{id}','ModuleController@update');
+Route::delete('/modules/{id}','ModuleController@destroy');
+
+Route::resource('/disciplines','DisciplineController');
