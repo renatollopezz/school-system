@@ -24,7 +24,7 @@ class CreateReleaseNotesTable extends Migration
             $table->float('note4', 1, 2)->default(0.00);
 
             $table->foreign('registration_id')->references('id')->on('registrations');
-            $table->foreign('class_id')->references('id')->on('classes');
+            $table->foreign('class_id')->references('id')->on('groups');
             $table->foreign('discipline_id')->references('id')->on('disciplines');
 
             $table->timestamps();

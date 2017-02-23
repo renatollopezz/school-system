@@ -18,7 +18,7 @@ class CreateGroupStudentsTable extends Migration
             $table->integer('class_id');
             $table->integer('registration_id');
 
-            $table->foreign('class_id')->references('id')->on('classes');
+            $table->foreign('class_id')->references('id')->on('groups');
             $table->foreign('registration_id')->references('id')->on('registrations');
             $table->timestamps();
         });
