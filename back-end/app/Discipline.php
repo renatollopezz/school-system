@@ -12,4 +12,8 @@ class Discipline extends Model
     public function module(){
       return $this->belongsTo('App\Module');
     }
+
+    public function releaseNote(){
+		return $this->hasMany('App\ReleaseNote');
+	}
 }

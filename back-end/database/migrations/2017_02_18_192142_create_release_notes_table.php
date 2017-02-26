@@ -16,7 +16,7 @@ class CreateReleaseNotesTable extends Migration
         Schema::create('release_notes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('registration_id');
-            $table->integer('class_id');
+            $table->integer('group_id');
             $table->integer('discipline_id');
             $table->float('note1', 1, 2)->default(0.00);
             $table->float('note2', 1, 2)->default(0.00);
@@ -24,7 +24,7 @@ class CreateReleaseNotesTable extends Migration
             $table->float('note4', 1, 2)->default(0.00);
 
             $table->foreign('registration_id')->references('id')->on('registrations');
-            $table->foreign('class_id')->references('id')->on('groups');
+            $table->foreign('group_id')->references('id')->on('groups');
             $table->foreign('discipline_id')->references('id')->on('disciplines');
 
             $table->timestamps();

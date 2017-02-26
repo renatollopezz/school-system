@@ -22,6 +22,10 @@ Route::resource('student','StudentController');
 Route::resource('schoolyear','SchoolYearController');
 //router schoolyear
 Route::resource('group','GroupController');
+//router registration
+Route::resource('registration','RegistrationController');
+//router releaseNote
+Route::resource('releasenote','ReleaseNoteController');
 
 Route::get('/modules','ModuleController@index');
 Route::get('/modules/{id}','ModuleController@show');

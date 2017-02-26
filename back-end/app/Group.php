@@ -12,4 +12,12 @@ class Group extends Model
 	public function schoolyear(){
 		return $this->belongsTo('App\SchoolYear','school_year_id');
 	}
+
+	public function students(){
+		return $this->belongsToMany('App\Student');
+	}
+
+	public function releaseNote(){
+		return $this->hasMany('App\ReleaseNote');
+	}
 }

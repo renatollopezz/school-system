@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\json;
 use App\Group;
+use App\Student;
 class GroupController extends Controller
 {
     
@@ -21,7 +22,11 @@ class GroupController extends Controller
 	//save new Group
     function store(Request $request){
     	$group = $request->all();
-    	Group::create($group);
+        $object = Group::create($group);
+        $students = $group['check'];
+        if($students){
+            $object->students()-sync($students);
+        }
     }
     //update Group = id
     function update($id,Request $request){
