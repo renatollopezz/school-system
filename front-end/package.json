@@ -1,0 +1,20 @@
+{
+  "name": "frontendschoolsystem",
+  "version": "1.0.0",
+  "description": "front system school",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "renato lopes/igor guerra",
+  "license": "MIT",
+  
+   "dependencies": {
+    "jquery": "*",
+    "angular": "*",
+    "angular-route": "*",
+    "angular-resource": "*",
+    "materialize-css":"*"
+
+  }
+}
