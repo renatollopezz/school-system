@@ -1,0 +1,28 @@
+body {
+    background: #EEEEEE;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    padding: 15px;
+    flex: 1 0 auto;
+}
+
+nav {
+    background: #4CAF50;
+}
+
+#card-search {
+    padding: 0;
+}
+
+#footer-school {
+    background: #388E3C;
+    padding-top: 0;
+}
+
+#btn-add {
+    margin: 1rem;
+}
