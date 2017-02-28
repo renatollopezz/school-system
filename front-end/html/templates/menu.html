@@ -1,4 +1,6 @@
-<li><a href="sass.html">Alunos</a></li>
-<li><a href="badges.html">Módulos</a></li>
-<li><a href="collapsible.html">Disciplinas</a></li>
-<li><a href="mobile.html">Turmas</a></li>
+<section ng-controller="MenuController as menu">
+	<li><a href ng-click="menu.students()">Alunos</a></li>
+	<li><a href ng-click="menu.modules()">Módulos</a></li>
+	<li><a href ng-click="menu.disciplines()">Disciplinas</a></li>
+	<li><a href ng-click="menu.groups()">Turmas</a></li>
+</section>

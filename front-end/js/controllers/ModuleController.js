@@ -1,18 +1,19 @@
-function ModuleController($scope,$injection,$location){
+function ModuleController($scope,$injector,$location,$window){
 	this.scope = $scope;
-	this.injection = $injection;
+	this.injector = $injector;
 	this.scope.modules = new Array();
 	this.scope.msgErro = "";
-	this.service = this.injection.get('ModuleService');
+	this.service = this.injector.get('ModuleService');
 
+	this.findAll();
 }
 
-ModuleService.prototype.findAll = function(){
+ModuleController.prototype.findAll = function(){
 	this.service.findAll({},this.findAllSuccess.bind(this),this.findAllErro.bind());
 }
-ModuleService.prototype.findAllSuccess = function(response){
+ModuleController.prototype.findAllSuccess = function(response){
 	this.scope.modules = response;
 }
-ModuleService.prototype.findAllErro = function(){
+ModuleController.prototype.findAllErro = function(){
 	this.msgErro = "Erro!";
 }

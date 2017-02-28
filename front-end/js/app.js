@@ -2,10 +2,10 @@
 var app = angular.module('app',['ngRoute','ngResource']);
 
 //router defines
-app.config(['$routeProvider', function($routeProvider){
+app.config(['$routeProvider',function($routeProvider){
 	$routeProvider
-		.when('/',{templateURL:"index.html"})
-		.when('/module',{templateURL:"html/templates/module.html"})
+		.when("/",{templateUrl:"html/templates/dashboard.html"})
+		.when("/module",{templateUrl:"html/templates/module.html"})
 	}
 ]);
 

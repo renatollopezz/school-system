@@ -3,10 +3,10 @@ function ModuleService($resource){
 
 	return $resource(path,{},{
 		findAll:{
-			url:path;
+			url:path,
 			method: "GET",
 			isArray: true
 		}
 
 	});
-}
+};
