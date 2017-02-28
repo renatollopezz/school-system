@@ -1,3 +1,4 @@
+<section ng-controller="ModuleController as modCtrl">
 <a id="btn-add" class="btn-floating btn-large waves-effect right waves-light green">
     <i class="material-icons">add</i>
 </a>
@@ -35,11 +36,11 @@
                 <th>Ações</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>Valor y</td>
-                    <td>Valor y</td>
-                    <td>Valor y</td>
-                    <td>Valor y</td>
+                <tr ng-repeat="ml in modules">
+                    <td>{{ml.id}}</td>
+                    <td>{{ml.description}}</td>
+                    <td>{{ml.registration_date}}</td>
+                    <td>{{ml.active}}</td>
                     <td>
                         <a class="material-icons" href=""> mode_edit</a>
                         <a class="material-icons" href=""> delete</a>
@@ -49,3 +50,4 @@
         </table>
     </div>
 </div>
+</section>
