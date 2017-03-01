@@ -27,10 +27,10 @@ Route::resource('registration','RegistrationController');
 //router releaseNote
 Route::resource('releasenote','ReleaseNoteController');
 
-Route::get('/modules','ModuleController@index');
-Route::get('/modules/{id}','ModuleController@show');
-Route::post('/modules','ModuleController@store');
-Route::put('/modules/{id}','ModuleController@update');
-Route::delete('/modules/{id}','ModuleController@destroy');
+Route::get('/modules','ModuleController@index')->middleware('cors');
+Route::get('/modules/{id}','ModuleController@show')->middleware('cors');
+Route::post('/modules','ModuleController@store')->middleware('cors');
+Route::put('/modules/{id}','ModuleController@update')->middleware('cors');
+Route::delete('/modules/{id}','ModuleController@destroy')->middleware('cors');
 
 Route::resource('/disciplines','DisciplineController');
