@@ -1,6 +1,8 @@
 $( document ).ready(function(){
 
-     $(".button-collapse").sideNav();
-     $('select').material_select();
-
+  $(".button-collapse").sideNav();
+  Materialize.updateTextFields();
+  $('select').material_select();
+  $('#aside-school').sideNav();
+  
 })

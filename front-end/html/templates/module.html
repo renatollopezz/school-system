@@ -1,53 +1,75 @@
 <section ng-controller="ModuleController as modCtrl">
-<a id="btn-add" class="btn-floating btn-large waves-effect right waves-light green">
-    <i class="material-icons">add</i>
-</a>
-<div id="card-search" class="card-panel">
-    <div class="row">
 
-        <div class="input-field col s7">
-            <i class="material-icons prefix">search</i>
-            <input placeholder="Pesquisar" id="search-field" type="text" class="validate">
+    <div class="col l10 m12 s12">
+        <div id="card-search" class="card-panel">
+            <div class="row">
+
+                <div class="input-field col s12 m6 l7">
+                    <input id="search-field" type="text">
+                    <label for="search-field">Pesquisar</label>
+                </div>
+
+
+                <div class="input-field col s12 m4 l4">
+                    <select>
+                   <option value="" disabled selected>Escolha o campo</option>
+                   <option value="1">Código</option>
+                   <option value="2">Descrição</option>
+                   <option value="3">Todos</option>
+                </select>
+                </div>
+                <div class="col m2 l1 center">
+                  <a id="btn-add" class="btn-floating btn-large green waves-effect waves-light hide-on-small-only" href="#">
+                      <i class="large material-icons">add</i>
+                  </a>
+                </div>
+
+            </div>
+            <!-- row -->
         </div>
 
-        <div class="input-field col s4">
-            <select>
-              <option value="" disabled selected>Pesquisar por</option>
-              <option value="1">#</option>
-              <option value="2">Descrição</option>
-              <option value="3">Ativo</option>
-              <option value="4">Data de cadastro</option>
-              <option value="5">Todos</option>
-          </select>
+        <div class="row">
+            <div class="card-panel">
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th class="center">#</th>
+                            <th>Descrição</th>
+                            <th class="center">Ativo</th>
+                            <th class="center">Data de cadastro</th>
+                            <th class="center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td class="center">1</td>
+                          <td>1º Módulo</td>
+                          <td class="center">
+                              <p>
+                                  <input type="checkbox" id="cs_ativo" />
+                                  <label for="cs_ativo"></label>
+                              </p>
+                          </td>
+                          <td class="center">28/02/2017</td>
+                          <td class="center">
+                              <a class="material-icons" href="#">mode_edit</a>
+                              <a class="material-icons" href="#">delete</a>
+                          </td>
+                      </tr>
+                        <tr ng-repeat="ml in modules">
+                            <td>{{ml.id}}</td>
+                            <td>{{ml.description}}</td>
+                            <td>{{ml.registration_date}}</td>
+                            <td>{{ml.active}}</td>
+                            <td>
+                                <a class="material-icons" href=""> mode_edit</a>
+                                <a class="material-icons" href=""> delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
     </div>
-</div>
-
-<div class="row">
-    <div class="card-panel">
-
-        <table class="responsive-table">
-            <thead>
-                <th>#</th>
-                <th>Descrição</th>
-                <th>Ativo</th>
-                <th>Data de cadastro</th>
-                <th>Ações</th>
-            </thead>
-            <tbody>
-                <tr ng-repeat="ml in modules">
-                    <td>{{ml.id}}</td>
-                    <td>{{ml.description}}</td>
-                    <td>{{ml.registration_date}}</td>
-                    <td>{{ml.active}}</td>
-                    <td>
-                        <a class="material-icons" href=""> mode_edit</a>
-                        <a class="material-icons" href=""> delete</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+    <script src="js/init.js" charset="utf-8"></script>
 </section>

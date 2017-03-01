@@ -1,13 +1,17 @@
 body {
-    background: #EEEEEE;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: #eee;
 }
 
 main {
-    padding: 15px;
     flex: 1 0 auto;
+    padding: 15px;
+}
+
+footer {
+    background: #388E3C !important;
 }
 
 nav {
@@ -15,14 +19,20 @@ nav {
 }
 
 #card-search {
-    padding: 0;
+    padding: 5px;
 }
 
-#footer-school {
-    background: #388E3C;
-    padding-top: 0;
+#card-search .row {
+    margin-bottom: 0;
+}
+
+#aside-school ul {
+    top: 87px;
+    height: 73%;
+    width: 235px;
+    overflow: hidden;
 }
 
 #btn-add {
-    margin: 1rem;
+    margin: 1rem 15px;
 }

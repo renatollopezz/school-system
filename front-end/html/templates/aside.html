@@ -1,5 +1,15 @@
-<aside>
-    <ul id="aside-school" class="side-nav fixed">
-      <ng-include src="html/templates/menu.html"></ng-include>
+<aside id="aside-school" class="col m2 l2 hide-on-med-and-down">
+    <ul class="side-nav fixed">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img src="http://materializecss.com/images/office.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <ng-include src="'html/templates/menu.html'"></ng-include>
     </ul>
 </aside>
