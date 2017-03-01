@@ -19,9 +19,9 @@
                 </select>
                 </div>
                 <div class="col m2 l1 center">
-                  <a id="btn-add" class="btn-floating btn-large green waves-effect waves-light hide-on-small-only" href="#">
-                      <i class="large material-icons">add</i>
-                  </a>
+                    <a id="btn-add" class="btn-floating btn-large green waves-effect waves-light hide-on-small-only" href="#">
+                        <i class="large material-icons">add</i>
+                    </a>
                 </div>
 
             </div>
@@ -41,27 +41,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                          <td class="center">1</td>
-                          <td>1º Módulo</td>
-                          <td class="center">
-                              <p>
-                                  <input type="checkbox" id="cs_ativo" />
-                                  <label for="cs_ativo"></label>
-                              </p>
-                          </td>
-                          <td class="center">28/02/2017</td>
-                          <td class="center">
-                              <a class="material-icons" href="#">mode_edit</a>
-                              <a class="material-icons" href="#">delete</a>
-                          </td>
-                      </tr>
+                        <tr ng-if="modules==false">
+                            <td colspan="5" class="center">Não possui registros</td>
+                        </tr>
                         <tr ng-repeat="ml in modules">
-                            <td>{{ml.id}}</td>
+                            <td class="center">{{ml.id}}</td>
                             <td>{{ml.description}}</td>
-                            <td>{{ml.registration_date}}</td>
-                            <td>{{ml.active}}</td>
-                            <td>
+                            <td class="center">
+                                <p>
+                                    <input type="checkbox" id="cs_ativo" ng-checked="{{ml.active}}" />
+                                    <label for="cs_ativo"></label>
+                                </p>
+                            </td>
+                            <td class="center">{{ml.registration_date}}</td>
+                            <td class="center">
                                 <a class="material-icons" href=""> mode_edit</a>
                                 <a class="material-icons" href=""> delete</a>
                             </td>
