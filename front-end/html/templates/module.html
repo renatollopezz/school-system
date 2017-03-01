@@ -49,8 +49,8 @@
                             <td>{{ml.description}}</td>
                             <td class="center">
                                 <p>
-                                    <input type="checkbox" id="cs_ativo" ng-checked="{{ml.active}}" />
-                                    <label for="cs_ativo"></label>
+                                    <input disabled type="checkbox" id="chk{{ml.id}}" ng-checked="{{ml.active}}" />
+                                    <label for="chk{{ml.id}}"></label>
                                 </p>
                             </td>
                             <td class="center">{{ml.registration_date}}</td>
