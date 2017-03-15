@@ -6,6 +6,7 @@ app.config(['$routeProvider',function($routeProvider){
 	$routeProvider
 		.when("/",{templateUrl:"html/templates/dashboard.html"})
 		.when("/module",{templateUrl:"html/templates/module.html"})
+		.when("/module/create",{templateUrl:"html/templates/module_create.html"})
 	}
 ]);
 

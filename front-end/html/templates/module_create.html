@@ -1,0 +1,28 @@
+<section ng-controller="ModuleController as modCtrl">
+
+    <div class="col l10 m12 s12">
+        <div class="card-panel">
+                <div class="row">
+                    <div class="input-field col s12 m6 l7">
+                            <input ng-model="module.description" type="text">
+                            <label for="module-field">Modulo</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 l7">
+                        <input ng-model="module.registration_date" type="text">
+                            <label>registration date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 l7">
+                            <input type="checkbox" ng-model="module.active" />
+                            <label>Active</label>
+                    </div>
+                </div>
+        </div>
+            <button class="waves-effect waves-light btn" ng-click="modCtrl.save()">Confirme</button>
+            <button class="waves-effect waves-light orange btn" ng-click="modCtrl.cancel()">Cancel</button>
+        </div>
+    <script src="js/init.js" charset="utf-8"></script>
+</section>

@@ -20,7 +20,7 @@
                 </div>
                 <div class="col m2 l1 center">
                     <a id="btn-add" class="btn-floating btn-large green waves-effect waves-light hide-on-small-only" href="#">
-                        <i class="large material-icons">add</i>
+                        <i ng-click="modCtrl.create()" class="large material-icons">add</i>
                     </a>
                 </div>
 
@@ -56,7 +56,7 @@
                             <td class="center">{{ml.registration_date}}</td>
                             <td class="center">
                                 <a class="material-icons" href=""> mode_edit</a>
-                                <a class="material-icons" href=""> delete</a>
+                                <a class="material-icons" href ng-click='modCtrl.remove(ml.id)'> delete</a>
                             </td>
                         </tr>
                     </tbody>

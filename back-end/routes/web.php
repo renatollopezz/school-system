@@ -11,6 +11,10 @@
 |
 */
 
+header('Access-Control-Allow-Origin:  *');
+header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Authorization');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,11 +30,12 @@ Route::resource('group','GroupController');
 Route::resource('registration','RegistrationController');
 //router releaseNote
 Route::resource('releasenote','ReleaseNoteController');
-
+/*
 Route::get('/modules','ModuleController@index')->middleware('cors');
 Route::get('/modules/{id}','ModuleController@show')->middleware('cors');
 Route::post('/modules','ModuleController@store')->middleware('cors');
 Route::put('/modules/{id}','ModuleController@update')->middleware('cors');
 Route::delete('/modules/{id}','ModuleController@destroy')->middleware('cors');
-
+*/
+Route::resource('modules','ModuleController');
 Route::resource('/disciplines','DisciplineController');

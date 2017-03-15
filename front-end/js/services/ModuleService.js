@@ -6,6 +6,14 @@ function ModuleService($resource){
 			url:path,
 			method: "GET",
 			isArray: true
+		},
+		save:{
+			method:"POST",
+			url:path+':modules'
+		},
+		remove:{
+			method:'DELETE',
+			url:path+'/:id'
 		}
 
 	});
